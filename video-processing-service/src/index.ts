@@ -33,7 +33,7 @@ app.post("/process-video", async (req, res) => {
 
     // process the video
     try {
-        convertVideo(inputFileName, outputFileName);
+        await convertVideo(inputFileName, outputFileName);
     } catch(err) {
         // need to delete raw vid from local if processing failed
         // AND delete "processed" vid from local... could be partially processed

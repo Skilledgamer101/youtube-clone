@@ -7,7 +7,6 @@
 import { Storage } from '@google-cloud/storage';
 import fs from 'fs';
 import ffmpeg from 'fluent-ffmpeg';
-import { resolve } from 'path';
 
 // create instance of GCS
 const storage = new Storage();
@@ -33,15 +32,16 @@ export function setupDirectories() {
  * @returns A promise that resolves when the video has been converted.
  */
 export function convertVideo(rawVideoName: string, processedVideoName: string) {
+    console.log("Made it to video conversion function");
     return new Promise<void>((resolve, reject) => {
         // below function is asynchronous (need event handlers)
         ffmpeg(`${localRawVideoPath}/${rawVideoName}`)
             .outputOptions("-vf", "scale=-1:360") // 360p
-            .on("end", () => {
+            .on("end", function () {
                 console.log("Video processing finished successfully"); // 200 code => success
                 resolve();
             })
-            .on("error", (err) => {
+            .on("error", function (err: any) {
                 console.log(`An error occured: ${err.message}`);
                 reject(err);
             })
@@ -72,7 +72,7 @@ export async function downloadRawVideo(fileName: string) {
  * @returns A promise that resolves when the file has been uploaded.
  */
 export async function uploadProcessedVideo(fileName: string) {
-    const bucket = storage.bucket(rawVideoBucketName);
+    const bucket = storage.bucket(processedVideoBucketName);
     await bucket    // await - blocks any code from running until await code is completed (synchronous)
         .upload(`${localProcessedVideoPath}/${fileName}`, { destination: fileName });
     console.log(

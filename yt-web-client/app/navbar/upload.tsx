@@ -15,9 +15,13 @@ export default function Upload() {
     }
 
     const handleUpload = async (file: File) => {
+        if (!file.type.startsWith('video/')) {
+            alert('Only video files are allowed.');
+            return;
+        }
         try {
             const response = await uploadVideo(file);
-            alert(`File uplaoded successfully. Response: ${JSON.stringify(response)}`);
+            alert(`File uploaded successfully. Response: ${JSON.stringify(response)}`);
         } catch (error) {
             alert(`Failed to upload file: ${error}`);
         }

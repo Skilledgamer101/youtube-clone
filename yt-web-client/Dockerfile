@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Build app
-RUN npm run builder
+RUN npm run build
 
 # Stage 2: Production stage
 FROM node:18

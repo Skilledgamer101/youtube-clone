@@ -38,6 +38,7 @@ export function setVideo(videoId: string, video: Video) {
         .collection(videoCollectionId)
         .doc(videoId)
         .set(video, {merge: true})      // update spec video property only while keeping other props if already present in firestore
+    console.log(`Video details successfully set: filename: ${video.filename}, status: ${video.status}`);
 }
 
 /**

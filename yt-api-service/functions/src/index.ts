@@ -70,6 +70,10 @@ export const generateUploadURL = onCall({maxInstances: 1}, async (request) => {
 
 export const getVideos = onCall({maxInstances: 1}, async () => {
   const querySnapshot =
-    await firestore.collection(videoCollectionId).limit(10).get();
+    await firestore
+      .collection(videoCollectionId)
+      .where("status", "==", "processed")
+      .limit(10)
+      .get();
   return querySnapshot.docs.map((doc) => doc.data());
 });

@@ -34,7 +34,7 @@
 
 ![YT Clone Homepage](https://github.com/user-attachments/assets/e89a3b27-a3df-4b41-aa15-3f411c08421a)
 
-This project mimics core features present in YouTube. It allows users to sign in via Google, upload videos, and view uploaded videos. I primarily built it as a learning experience for full stack app development.
+This project mimics core features present in YouTube. It allows users to sign in via Google, upload videos, and view other uploaded videos. I primarily built it as a learning experience for full stack app development.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -55,13 +55,13 @@ This project mimics core features present in YouTube. It allows users to sign in
 ### Architecture
 ![Architecture Layout](https://github.com/user-attachments/assets/e8fcf070-baf4-4477-9521-a82da21fa5d0)
 
-1. Cloud Storage will store the raw and processed videos uploaded by users.
-2. Pub/Sub will send messages to the video processing service.
-3. Cloud Run will host a non-public video processing service. After it transcodes videos, they will be uploaded to Cloud Storage.
-4. Cloud Firestore will store the metadata for the videos.
-5. Cloud Run will host a Next.js app, which will serve as the Youtube web client.
-6. The Next.js app will make API calls to Firebase Functions.
-7. Firebase Functions will fetch videos from Cloud Firestore and return them.
+1. Cloud Storage stores the raw and processed videos uploaded by users.
+2. Pub/Sub sends messages to the video processing service.
+3. Cloud Run hosts a non-public video processing service. After it transcodes videos, they are uploaded to Cloud Storage.
+4. Cloud Firestore stores the metadata for the videos.
+5. Cloud Run hosts a Next.js app, which serves as the Youtube web client.
+6. The Next.js app makes API calls to Firebase Functions.
+7. Firebase Functions fetches videos from Cloud Firestore and returns them.
 
 ### Demo
 https://yt-web-client-227167548795.us-central1.run.app/

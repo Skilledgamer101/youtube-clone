@@ -52,6 +52,11 @@ This project mimics core features present in video streaming websites. It allows
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
 * [![TypeScript][TypeScript]][TypeScript-url]
+* [![Express][Express.js]][Express-url]
+* [![Docker][Docker]][Docker-url]
+* [![FFmpeg][FFmpeg]][FFmpeg-url]
+* [![Firebase][Firebase]][Firebase-url]
+* [![GCloud][GCloud]][Gcloud-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -191,6 +196,16 @@ GCDialog was used to display a countdown timer dialog in the `clear_everything.p
 [React-url]: https://reactjs.org/
 [TypeScript]: https://shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=FFF
 [TypeScript-url]: https://www.typescriptlang.org/
+[Express.js]: https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white
+[Express-url]: https://expressjs.com/
+[Docker]: https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white
+[Docker-url]: https://www.docker.com/
+[FFmpeg]: https://img.shields.io/badge/FFmpeg-007808?style=for-the-badge&logo=FFmpeg&logoColor=green
+[FFmpeg-url]: https://www.ffmpeg.org/
+[Firebase]: https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black
+[Firebase-url]: https://firebase.google.com
+[GCloud]: https://img.shields.io/badge/Google%20Cloud-4285F4?&style=for-the-badge&logo=Google%20Cloud&logoColor=white
+[GCloud-url]: https://cloud.google.com
 [homepage-screenshot]: images/homepage.png
 [apps-screenshot]: images/apps.png
 [explorer-screenshot]: images/explorer.png

@@ -63,9 +63,6 @@ This project mimics core features present in YouTube. It allows users to sign in
 6. The Next.js app makes API calls to Firebase Functions.
 7. Firebase Functions fetches videos from Cloud Firestore and returns them.
 
-### Demo
-https://yt-web-client-227167548795.us-central1.run.app/
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTACT -->

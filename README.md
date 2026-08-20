@@ -21,7 +21,6 @@
       <ul>
         <li><a href="#built-with">Built With</a></li>
         <li><a href="#architecture">Architecture</a></li>
-        <li><a href="#demo">Demo</a></li>
       </ul>
     </li>
     <li><a href="#contact">Contact</a></li>
